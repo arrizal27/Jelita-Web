@@ -84,6 +84,20 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+ 
 </body>
 
 </html>
+
+// Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  <!-- var firebaseConfig = {
+    apiKey: "AIzaSyAJqgQ9d46iuQnkSkN0UBSlC30akvaUf9g",
+    authDomain: "jelita-f8a34.firebaseapp.com",
+    databaseURL: "https://jelita-f8a34-default-rtdb.firebaseio.com",
+    projectId: "jelita-f8a34",
+    storageBucket: "jelita-f8a34.appspot.com",
+    messagingSenderId: "280826785622",
+    appId: "1:280826785622:web:659986e83464baea1af0f7",
+    measurementId: "G-WSJ8TH0RZ1"
+  }; -->
