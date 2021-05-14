@@ -59,8 +59,8 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-warning py-2 collapse-inner rounded">
-                        <a class="collapse-item text-black font-weight-bold" href="login.html">Request User</a>
-                        <a class="collapse-item text-black font-weight-bold" href="register.html">Request Pengepul</a>
+                        <a class="collapse-item text-black font-weight-bold" href="login">Request User</a>
+                        <a class="collapse-item text-black font-weight-bold" href="register">Request Pengepul</a>
                     </div>
                 </div>
             </li>
