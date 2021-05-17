@@ -14,7 +14,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">    
-                <a class="nav-link text-warning" href="index.html">
+                <a class="nav-link text-warning" href="dashboard">
                     <i class="fas fa-fw fa-tachometer-alt text-warning"></i>
                     <span>Dashboard</span></a>
             </li>

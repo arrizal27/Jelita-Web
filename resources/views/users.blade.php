@@ -11,7 +11,7 @@
 		</div>
 		<div class="card-body">
 			<div class="table-responsive-sm">
-				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+				<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
 					<thead class="bg-gray-900 text-warning">
 						<tr>
 							<th>Name</th>
@@ -20,6 +20,8 @@
 							<th>Age</th>
 							<th>Start date</th>
 							<th>Salary</th>
+							<th>Status</th>
+							<th>Actions</th>
 						</tr>
 					</thead>
 					<tfoot class="bg-gray-900 text-warning">
@@ -30,6 +32,8 @@
 							<th>Age</th>
 							<th>Start date</th>
 							<th>Salary</th>
+							<th>Status</th>
+							<th>Actions</th>
 						</tr>
 					</tfoot>
 					<tbody>
@@ -40,6 +44,11 @@
 							<td>61</td>
 							<td>2011/04/25</td>
 							<td>$320,800</td>
+							<td><div class="badge badge-warning badge-pill">Pending</div></td>
+							<td>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark mr-2"><i data-feather="more-vertical"></i></button>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark"><i data-feather="trash-2"></i></button>
+							</td>
 						</tr>
 						<tr>
 							<td>Garrett Winters</td>
@@ -48,6 +57,11 @@
 							<td>63</td>
 							<td>2011/07/25</td>
 							<td>$170,750</td>
+							<td><div class="badge badge-warning badge-pill">Pending</div></td>
+							<td>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark mr-2"><i data-feather="more-vertical"></i></button>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark"><i data-feather="trash-2"></i></button>
+							</td>
 						</tr>
 						<tr>
 							<td>Ashton Cox</td>
@@ -56,6 +70,11 @@
 							<td>66</td>
 							<td>2009/01/12</td>
 							<td>$86,000</td>
+							<td><div class="badge badge-warning badge-pill">Pending</div></td>
+							<td>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark mr-2"><i data-feather="more-vertical"></i></button>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark"><i data-feather="trash-2"></i></button>
+							</td>
 						</tr>
 						<tr>
 							<td>Cedric Kelly</td>
@@ -64,6 +83,11 @@
 							<td>22</td>
 							<td>2012/03/29</td>
 							<td>$433,060</td>
+							<td><div class="badge badge-warning badge-pill">Pending</div></td>
+							<td>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark mr-2"><i data-feather="more-vertical"></i></button>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark"><i data-feather="trash-2"></i></button>
+							</td>
 						</tr>
 						<tr>
 							<td>Airi Satou</td>
@@ -72,6 +96,11 @@
 							<td>33</td>
 							<td>2008/11/28</td>
 							<td>$162,700</td>
+							<td><div class="badge badge-secondary badge-pill">Part-time</div></td>
+							<td>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark mr-2"><i data-feather="more-vertical"></i></button>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark"><i data-feather="trash-2"></i></button>
+							</td>
 						</tr>
 						<tr>
 							<td>Brielle Williamson</td>
@@ -80,6 +109,11 @@
 							<td>61</td>
 							<td>2012/12/02</td>
 							<td>$372,000</td>
+							<td><div class="badge badge-secondary badge-pill">Part-time</div></td>
+							<td>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark mr-2"><i data-feather="more-vertical"></i></button>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark"><i data-feather="trash-2"></i></button>
+							</td>
 						</tr>
 						<tr>
 							<td>Herrod Chandler</td>
@@ -88,6 +122,11 @@
 							<td>59</td>
 							<td>2012/08/06</td>
 							<td>$137,500</td>
+							<td><div class="badge badge-secondary badge-pill">Part-time</div></td>
+							<td>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark mr-2"><i data-feather="more-vertical"></i></button>
+								<button class="btn btn-datatable btn-icon btn-transparent-dark"><i data-feather="trash-2"></i></button>
+							</td>
 						</tr>
 					</tbody>
 				</table>
