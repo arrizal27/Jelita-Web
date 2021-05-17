@@ -40,16 +40,17 @@
                             <h6 class="text-gray-900 small mt-5 mb-4 ml-1">Belum Punya Akun?
                                 <a class="text-warning" href="daftar">Daftar</a> 
                             </h6>
-                            <form action="{{ route('login') }}" method="POST" class="">
-                            {{csrf_field()}}
+                            <form action="{{ route('postlogin') }}" method="POST" class="">
+                                @csrf
+
                                 <div class="form-group">
                                     <h6 class="text-gray-900 ml-1">Email</h6>
-                                    <input type="email" class="form-control form-control-user"
+                                    <input type="email" name="email" class="form-control form-control-user"
                                     id="exampleInputEmail" aria-describedby="emailHelp">
                                 </div>
                                 <div class="form-group">
                                     <h6 class="text-gray-900 ml-1">Password</h6>
-                                    <input type="password" class="form-control form-control-user mb-4"
+                                    <input type="password" name="password" class="form-control form-control-user mb-4"
                                     id="exampleInputPassword">
                                 </div>
                                 <div class="form-group">
@@ -84,12 +85,29 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../assets/js/sb-admin-2.min.js"></script>
+    <script src="../assets/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
     
     <!-- this is firebase preference extension meren -->
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    <script>
+        @if(Session::has('sukses'))
+        swal({
+            type: 'success',
+            title: 'Success!',
+            text: '{{ Session::get('sukses') }}'
+        });
+        @endif
+        @if(Session::has('errorr'))
+        swal({
+            type: 'error',
+            title: 'Oops...',
+            text: '{{ Session::get('errorr') }}'
+        });
+        @endif
+    </script>
  
 </body>
 

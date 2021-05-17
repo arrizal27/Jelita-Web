@@ -22,14 +22,10 @@ Route::get('welcome', function () {
     return view('welcome');
 });
 
-Route::get('dashboard', function () {
-    return view('dashboard');
-});
+Route::get('dashboard', 'DashboardController@index');
+Route::get('users', 'UsersController@index');
 
 //route login
-Route::get('/login', 'AuthController@getlogin')->name('login')->middleware('guest');
-Route::post('/login','AuthController@postlogin')->middleware('guest');
-
-Route::get('users', function () {
-    return view('users');
-});
+Route::get('login', 'AuthController@getlogin')->name('login');
+Route::post('login','AuthController@postlogin')->name('postlogin');
+Route::get('logout', 'AuthController@logout');

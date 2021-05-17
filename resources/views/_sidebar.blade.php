@@ -37,7 +37,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-warning py-2 collapse-inner rounded">
                         <a class="collapse-item text-black font-weight-bold" href="users">Users Aktif</a>
-                        <a class="collapse-item text-black font-weight-bold" href="users">Pengepul</a>
+                        <a class="collapse-item text-black font-weight-bold" href="pengepul">Pengepul</a>
                     </div>
                 </div>
             </li>
@@ -59,8 +59,8 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-warning py-2 collapse-inner rounded">
-                        <a class="collapse-item text-black font-weight-bold" href="login">Request User</a>
-                        <a class="collapse-item text-black font-weight-bold" href="register">Request Pengepul</a>
+                        <a class="collapse-item text-black font-weight-bold" href="requser">Request User</a>
+                        <a class="collapse-item text-black font-weight-bold" href="reqpengepul">Request Pengepul</a>
                     </div>
                 </div>
             </li>

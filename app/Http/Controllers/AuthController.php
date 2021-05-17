@@ -11,7 +11,6 @@ use App\Providers\RouteServiceProvider;
 // use Kreait\Firebase\Exception\FirebaseException;
 // use Illuminate\Validation\ValidationException;
 
-
 use Auth;
 use App\User;
 
@@ -19,15 +18,15 @@ class AuthController extends Controller
 {
     //
     // use AuthenticatesUsers;
-    protected $auth;
-    protected $redirect = RouteServiceProvider::HOME;
+    //protected $auth;
+    //protected $redirect = RouteServiceProvider::HOME;
 
-    public function _const(FirebaseAuth $auth)
+    /*public function _const(FirebaseAuth $auth)
     {
         # code...
         $this->middleware('guest')->except('logout');
         $this->auth = $auth;
-    }
+    }*/
 
     // function login 
     public function getlogin(){
@@ -36,27 +35,41 @@ class AuthController extends Controller
         
     }
 
-    // function login yang kepake
-    public function postlogin(Request $request) 
-    {
-    	if (!\Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-    		return redirect()->back();
-    	}
-
-    	return redirect()->route('dashboard');
-    }
-
     // jika mau ada register 
     public function getRegister()
     {
-    	return view('register');
+        return view('register');
     }
-    public function logout()
-    {
-        \Auth::logout();
 
-    	return redirect()->route('login');
+    // function login yang kepake
+    public function postlogin(Request $request) 
+    {
+    	// if (!\Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+    	// 	return redirect()->back()->with('errorr', 'Gagal Login');
+    	// }
+
+    	// return redirect()->route('dashboard')->with('sukses', 'Berhasil Login');
+
+        if (Auth::attempt($request->only('email','password'))) {
+            session(['berhasil_login' => true]);
+            return redirect('dashboard')->with('sukses', 'Berhasil Login');
+        } else {
+            return redirect('login')->with('errorr', 'Login Gagal! Username / Password Salah!');
+        }
     }
+
+    public function logout(Request $request){
+
+        //\Auth::logout();
+        //return redirect()->route('login');
+
+        $request->session()->flush();
+        return redirect('login')->with('sukses', 'Berhasil Logout');
+
+    }
+
+
+    //FIREBASE
     public function login(Request $request, $provider)
     {
         # code...
