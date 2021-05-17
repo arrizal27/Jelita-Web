@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controller\{AuthController};
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +26,9 @@ Route::get('dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('login', function () {
-    return view('login');
-});
+//route login
+Route::get('/login', 'AuthController@getlogin')->name('login')->middleware('guest');
+Route::post('/login','AuthController@postlogin')->middleware('guest');
 
 Route::get('users', function () {
     return view('users');

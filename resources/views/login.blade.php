@@ -40,7 +40,8 @@
                             <h6 class="text-gray-900 small mt-5 mb-4 ml-1">Belum Punya Akun?
                                 <a class="text-warning" href="daftar">Daftar</a> 
                             </h6>
-                            <form class="">
+                            <form action="{{ route('login') }}" method="POST" class="">
+                            {{csrf_field()}}
                                 <div class="form-group">
                                     <h6 class="text-gray-900 ml-1">Email</h6>
                                     <input type="email" class="form-control form-control-user"
@@ -88,9 +89,9 @@
 </body>
 
 </html>
-
+<!-- 
 // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional -->
   <!-- var firebaseConfig = {
     apiKey: "AIzaSyAJqgQ9d46iuQnkSkN0UBSlC30akvaUf9g",
     authDomain: "jelita-f8a34.firebaseapp.com",

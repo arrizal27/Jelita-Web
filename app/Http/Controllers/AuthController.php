@@ -1,24 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Kreait\Firebase\Auth as FirebaseAuth;
-use Kreait\Firebase\Exception\FirebaseException;
-use Illuminate\Validation\ValidationException;
+// use Illuminate\Foundation\Auth\AuthenticatesUsers;
+// use Kreait\Firebase\Auth as FirebaseAuth;
+// use Kreait\Firebase\Exception\FirebaseException;
+// use Illuminate\Validation\ValidationException;
 
 
 use Auth;
-use App\Models\User;
+use App\User;
 
-class LoginController extends Controller
+class AuthController extends Controller
 {
     //
-    use AuthenticatesUsers;
+    // use AuthenticatesUsers;
     protected $auth;
     protected $redirect = RouteServiceProvider::HOME;
 
@@ -27,6 +27,35 @@ class LoginController extends Controller
         # code...
         $this->middleware('guest')->except('logout');
         $this->auth = $auth;
+    }
+
+    // function login 
+    public function getlogin(){
+
+        return view('login');
+        
+    }
+
+    // function login yang kepake
+    public function postlogin(Request $request) 
+    {
+    	if (!\Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+    		return redirect()->back();
+    	}
+
+    	return redirect()->route('dashboard');
+    }
+
+    // jika mau ada register 
+    public function getRegister()
+    {
+    	return view('register');
+    }
+    public function logout()
+    {
+        \Auth::logout();
+
+    	return redirect()->route('login');
     }
     public function login(Request $request, $provider)
     {
@@ -43,10 +72,14 @@ class LoginController extends Controller
 
        }
     }
-    public function username(){
+    public function username()
+    {
+
         return 'email';
+    
     }
-    public function handleCall(Request $request, $provider){
+    public function handleCall(Request $request, $provider)
+    {
         $TokenId = $request->input('tokenid', '');
         try{
             $verivtoken = $this->auth->verifyIdToken($socialTokenId);
