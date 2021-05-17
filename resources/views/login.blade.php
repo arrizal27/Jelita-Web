@@ -52,9 +52,14 @@
                                     <input type="password" class="form-control form-control-user mb-4"
                                     id="exampleInputPassword">
                                 </div>
-                                <a href="/dashboard" class="btn btn-warning btn-sm col-lg-4">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-warning btn-sm col-lg-4" tabindex="4">
+                                        Masuk
+                                    </button>
+                                </div>
+                                <!-- <a href="/dashboard" class="btn btn-warning btn-sm col-lg-4">
                                     Masuk
-                                </a>
+                                </a> -->
                                 <a href="forgot_password" class="col-lg-8 small text-danger">
                                     Lupa Password?
                                 </a>
